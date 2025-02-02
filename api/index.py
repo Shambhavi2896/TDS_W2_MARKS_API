@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import json
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Load student data from the JSON file
 def load_data():
@@ -32,5 +32,5 @@ def get_marks():
     response.headers.add('Access-Control-Allow-Origin', '*')  # Enable CORS for any origin
     return response
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run()
